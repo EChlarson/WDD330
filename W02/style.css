@@ -1,0 +1,48 @@
+body {
+   font-family: "adapter-mono-pe-variable", sans-serif;
+   width: 20rem;
+   margin: 1rem auto;
+   color: white;
+}
+
+h1 {
+   margin: 0.25rem;
+   font-size: 40px;
+}
+
+label {
+   padding: 0.5rem 0.25rem;
+   font-size: 18px;
+   font-weight: bold;
+}
+
+input {
+   font-size: 18px;
+   font-weight: bold;
+   width: 10rem;
+   padding: 0.5rem;
+   border-radius: 0.75rem;
+   margin: 0.5rem;
+}
+
+.top,
+.bottom {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: rgb(99, 20, 20);
+   margin: 1rem;
+   padding: 1rem;
+   border-radius: 0.75rem;
+}
+
+#startButton,
+#pauseButton {
+   width: 3rem;
+   height: 3rem;
+   font-size: 25px;
+   margin: 0.25rem;
+   border-radius: 0.75rem;
+   color: rgb(99, 20, 20);
+}
+
