@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FormData Example</title>
+</head>
+<body>
+  <form id="formElem">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="John">
+    <label for="surname">Surname:</label>
+    <input type="text" id="surname" name="surname" value="Smith">
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const formElem = document.getElementById("formElem");
+
+      formElem.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(formElem);
+
+        // Append the current date as an additional field
+        const currentDate = new Date().toISOString();
+        formData.append("submissionDate", currentDate);
+
+        // Log all the data to the console
+        console.log("Form data submitted:");
+        for (const [key, value] of formData.entries()) {
+          console.log(`${key}: ${value}`);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
