@@ -3,7 +3,8 @@
 }
 
 body {
-   padding-top: 100px;
+   padding-top: 10px;
+   margin: 0, auto;
 }
 
 /*Number Display*/
@@ -78,6 +79,7 @@ body {
    line-height: 1.5;
    color: #eee;
    background-color: #111;
+   transform-origin: bottom;
 }
 
 .segment-overlay_bottom {
@@ -86,9 +88,18 @@ body {
    color: #fff;
    background-color: #333;
    border-top: 2px solid black;
+   transform-origin: top;
 }
 
 /*Animations*/
+.segment-overlay.flip .segment-overlay_top {
+   animation: flip-top 0.8s linear;
+}
+
+.segment-overlay.flip .segment-overlay_bottom {
+   animation: flip-bottom 0.8s linear;
+}
+
 @keyframes flip-top {
    0% {
       transform: rotateX(0deg);
@@ -103,6 +114,6 @@ body {
       transform: rotateX(90deg);
    }
    100% {
-      transform: rotateX(90deg);
+      transform: rotateX(0deg);
    }
 }
